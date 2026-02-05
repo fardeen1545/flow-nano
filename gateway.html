@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Flow Launcher</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="gateway.css">
+</head>
+<body>
+  <div class="top-bar">
+    <div class="lang-switch">
+      <span class="material-symbols-outlined">language</span>
+      <select id="languageSelector">
+        <option value="vi">Tiếng Việt</option>
+        <option value="en">English</option>
+        <option value="hi">हिन्दी (India)</option>
+        <option value="th">ไทย (Thailand)</option>
+        <option value="ur">اردو (Pakistan)</option>
+        <option value="bn">বাংলা (Bangladesh)</option>
+        <option value="es">Español</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="header">
+      <img src="images/logo.png" alt="Logo" class="logo">
+      <h1>Auto Flow</h1>
+      <p data-lang-key="subtitle">Trình quản lý tác vụ tự động cho Flow AI (Veo)</p>
+    </div>
+
+    <div class="versions">
+      <div class="version-card classic" id="btn-classic">
+        <div class="badge-classic" data-lang-key="badge_classic">EXTENSION</div>
+        <div class="icon-area">
+          <span class="material-symbols-outlined">extension</span>
+        </div>
+        <div class="info">
+          <h3 data-lang-key="classic_title">Phiên bản 7.7.7 (Extension)</h3>
+          <p data-lang-key="classic_desc">
+            Phiên bản tiện ích mở rộng quen thuộc. Chạy trực tiếp trên trình duyệt Chrome.
+          </p>
+        </div>
+        <span class="material-symbols-outlined arrow">chevron_right</span>
+      </div>
+
+      <div class="version-card new" id="btn-glabs">
+        <div class="badge" data-lang-key="badge_recommended">KHUYÊN DÙNG</div>
+        <div class="icon-area">
+          <span class="material-symbols-outlined">desktop_windows</span>
+        </div>
+        <div class="info">
+          <h3 data-lang-key="glabs_title">G-Labs Automation</h3>
+          <p data-lang-key="glabs_desc">
+            Tạo video miễn phí không giới hạn với Veo / Flow. Bản nâng cấp toàn diện, tốc độ cao và ổn định.
+          </p>
+        </div>
+        <span class="material-symbols-outlined arrow">open_in_new</span>
+      </div>
+    </div>
+
+    <div class="quick-links">
+      <a href="https://github.com/duckmartians/Auto-Flow" target="_blank" class="link-item">
+        <span class="material-symbols-outlined">menu_book</span> <span data-lang-key="link_guide">Hướng dẫn</span>
+      </a>
+      <a href="#" class="link-item" style="color: #fdd663;">
+        <span class="material-symbols-outlined">coffee</span> <span data-lang-key="link_donate">Mời tôi ly cà phê</span>
+      </a>
+    </div>
+
+    <div class="footer">
+      Designed by duckmartians
+    </div>
+  </div>
+  <script src="gateway.js"></script>
+</body>
+</html>

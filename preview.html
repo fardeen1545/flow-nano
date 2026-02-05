@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flow Nano Preview</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #f5f5f5;
+      padding: 40px;
+      margin: 0;
+    }
+    .preview-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 40px;
+    }
+    .extension-window {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      padding: 0;
+      margin-bottom: 40px;
+      overflow: hidden;
+    }
+    .chrome-bar {
+      background: #e8eaed;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid #dadce0;
+    }
+    .chrome-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #dadce0;
+    }
+    .chrome-dot.red { background: #ff5f56; }
+    .chrome-dot.yellow { background: #ffbd2e; }
+    .chrome-dot.green { background: #27c93f; }
+    .chrome-title {
+      flex: 1;
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+    }
+    iframe {
+      width: 450px;
+      height: 600px;
+      border: none;
+      display: block;
+    }
+    .info-box {
+      background: white;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .info-box h2 {
+      margin-top: 0;
+      color: #667eea;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .feature {
+      padding: 16px;
+      background: #f8f9fa;
+      border-radius: 6px;
+      border-left: 3px solid #667eea;
+    }
+    .feature h3 {
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      color: #333;
+    }
+    .feature p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-container">
+    <h1>🚀 Flow Nano Extension Preview</h1>
+    <p class="subtitle">Chrome Extension for Bulk Image Downloading from Google Flow</p>
+    
+    <div class="extension-window">
+      <div class="chrome-bar">
+        <div class="chrome-dot red"></div>
+        <div class="chrome-dot yellow"></div>
+        <div class="chrome-dot green"></div>
+        <div class="chrome-title">Flow Nano - Bulk Image Downloader</div>
+      </div>
+      <iframe src="popup.html"></iframe>
+    </div>
+
+    <div class="info-box">
+      <h2>✨ Key Features</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>📝 Multiple Prompts</h3>
+          <p>Enter multiple prompts at once, one per line, for batch processing</p>
+        </div>
+        <div class="feature">
+          <h3>🔄 Auto Generation</h3>
+          <p>Automatically fills prompts and triggers image generation</p>
+        </div>
+        <div class="feature">
+          <h3>💾 Auto Download</h3>
+          <p>Downloads all generated images with descriptive filenames</p>
+        </div>
+        <div class="feature">
+          <h3>⚙️ Configurable</h3>
+          <p>Adjust delays and settings to match your needs</p>
+        </div>
+        <div class="feature">
+          <h3>📊 Progress Tracking</h3>
+          <p>Real-time status updates and progress visualization</p>
+        </div>
+        <div class="feature">
+          <h3>🎨 Beautiful UI</h3>
+          <p>Modern, gradient design with intuitive controls</p>
+        </div>
+      </div>
+
+      <h2 style="margin-top: 32px;">📦 Installation</h2>
+      <ol style="line-height: 1.8;">
+        <li>Download or clone the repository</li>
+        <li>Open Chrome and navigate to <code>chrome://extensions/</code></li>
+        <li>Enable "Developer mode" (toggle in top right)</li>
+        <li>Click "Load unpacked"</li>
+        <li>Select the flow-nano directory</li>
+        <li>Navigate to Google Flow and start generating!</li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

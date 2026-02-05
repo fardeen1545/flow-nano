@@ -124,21 +124,26 @@ async function enterPrompt(prompt) {
 async function clickGenerateButton() {
   // Look for the generate/create button - adjust selectors based on actual Flow page structure
   const selectors = [
-    'button:has-text("Generate")',
-    'button:has-text("Create")',
-    'button:has-text("generate")',
-    'button:has-text("create")',
     'button[type="submit"]',
     'button[aria-label*="generate" i]',
     'button[aria-label*="create" i]'
   ];
 
-  // Try to find button by text content
-  const buttons = Array.from(document.querySelectorAll('button'));
-  const generateButton = buttons.find(btn => {
-    const text = btn.textContent.toLowerCase();
-    return text.includes('generate') || text.includes('create') || text.includes('submit');
-  });
+  // First try standard selectors
+  let generateButton = null;
+  for (const selector of selectors) {
+    generateButton = document.querySelector(selector);
+    if (generateButton) break;
+  }
+
+  // If not found, try to find button by text content
+  if (!generateButton) {
+    const buttons = Array.from(document.querySelectorAll('button'));
+    generateButton = buttons.find(btn => {
+      const text = btn.textContent.toLowerCase();
+      return text.includes('generate') || text.includes('create') || text.includes('submit');
+    });
+  }
 
   if (!generateButton) {
     throw new Error('Could not find generate button. The page structure may have changed.');

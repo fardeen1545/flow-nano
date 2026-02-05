@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flow Nano - Bulk Downloader</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Flow Nano</h1>
+      <p class="subtitle">Bulk Image Downloader for Google Flow</p>
+    </header>
+
+    <div class="instructions">
+      <p>📝 Enter prompts (one per line) to generate and download images:</p>
+    </div>
+
+    <div class="input-section">
+      <textarea 
+        id="prompts" 
+        placeholder="Enter prompts here (one per line)&#10;Example:&#10;a sunset over mountains&#10;a futuristic city&#10;a cat wearing a hat"
+        rows="8"
+      ></textarea>
+    </div>
+
+    <div class="options">
+      <label>
+        <input type="checkbox" id="autoDownload" checked>
+        Auto-download generated images
+      </label>
+      <label>
+        Download delay (seconds):
+        <input type="number" id="delay" value="5" min="1" max="30">
+      </label>
+    </div>
+
+    <div class="button-group">
+      <button id="startBtn" class="primary-btn">
+        <span class="icon">🚀</span>
+        Start Bulk Generation
+      </button>
+      <button id="stopBtn" class="secondary-btn" disabled>
+        <span class="icon">⏹️</span>
+        Stop
+      </button>
+    </div>
+
+    <div class="status" id="status">
+      <div class="status-message" id="statusMessage">Ready to start</div>
+      <div class="progress-container" id="progressContainer" style="display: none;">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-text" id="progressText">0 / 0</div>
+      </div>
+    </div>
+
+    <div class="info">
+      <p><strong>How to use:</strong></p>
+      <ol>
+        <li>Navigate to <a href="https://labs.google/fx/tools/flow" target="_blank">Google Flow</a></li>
+        <li>Enter your prompts above (one per line)</li>
+        <li>Click "Start Bulk Generation"</li>
+        <li>The extension will automatically generate and download all images</li>
+      </ol>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
